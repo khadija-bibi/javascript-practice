@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){// ek hi barr 2s kai kai baad
+    //     console.log("khadija");
+    // },2000)//method that call api as well
+
+    // setInterval(function(){// baar baar 2s kai baad 
+    //     console.log("khadija");
+    // },2000)//method that call api as well
+
+    const sayName = function(){// ek hi barr 2s kai kai baad
+        console.log("khadija");
+        
+    }
+    setTimeout(sayName,2000)
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series" 
+    }
+    const changeMe=setTimeout(changeText,2000)
+    document.querySelector('#stop').addEventListener('click',
+    function(){
+        clearTimeout(changeMe)
+        console.log("STOP")
+    })
+</script>
+</html>
